@@ -1,0 +1,5 @@
+*.env
+*.tsv
+build
+.idea
+.gradle
