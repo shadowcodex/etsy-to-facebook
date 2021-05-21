@@ -16,11 +16,11 @@ suspend fun parseListing(out : PrintWriter, parser : Parser, listingData : JsonO
 
       thisListing += listing.get("listing_id").toString() + "\t"
       thisListing += listing.get("title").toString() + "\t"
-      thisListing += listing.get("description").toString() + "\t"
+      thisListing += listing.get("description").toString().replace("\n", " ") + "\t"
       thisListing += "in stock" + "\t"
       thisListing += "new" + "\t"
       thisListing += listing.get("price").toString() + "\t"
-      thisListing += listing.get("url").toString() + "\t"
+      thisListing += listing.get("url").toString().replace("https://www", "https://marycary") + "\t"
 
       var count = 0
       var first_image = ""
